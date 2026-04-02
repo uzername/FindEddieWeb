@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6327868795154632286}
+  - component: {fileID: 8534578709786648188}
   m_Layer: 0
   m_Name: BuildingThin
   m_TagString: Untagged
@@ -50,6 +51,27 @@ Transform:
   - {fileID: 1147206368915728990}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &8534578709786648188
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4632169034299358501}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 5.7, y: 3.24, z: 11.9}
+  m_Center: {x: -1.21, y: 1.64, z: 5.6}
 --- !u!1001 &1370709758928915319
 PrefabInstance:
   m_ObjectHideFlags: 0
