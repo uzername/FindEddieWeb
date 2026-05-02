@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerBoundsChecker : MonoBehaviour
 {
@@ -15,7 +16,7 @@ public class PlayerBoundsChecker : MonoBehaviour
             pos.z < minXZ.y || pos.z > maxXZ.y)
         {
             HandleOutOfBounds();
-        }
+        } else 
 
         // Check height (water / falling)
         if (pos.y < minHeight)
@@ -27,12 +28,14 @@ public class PlayerBoundsChecker : MonoBehaviour
     void HandleOutOfBounds()
     {
         Debug.Log("Player left map bounds");
-        
+        MySceneOptions.endingOption = GameEndings.Falling;
+        SceneManager.LoadScene(1);
     }
 
     void HandleBelowHeight()
     {
         Debug.Log("Player fell too low / into water");
-        
+        MySceneOptions.endingOption = GameEndings.Swimming;
+        SceneManager.LoadScene(1);
     }
 }
