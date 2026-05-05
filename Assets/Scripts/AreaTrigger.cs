@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class AreaTrigger : MonoBehaviour
 {
@@ -18,7 +19,8 @@ public class AreaTrigger : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             Debug.Log("Player reached Town Exit");
-            
+            MySceneOptions.endingOption = GameEndings.LeftGate;
+            SceneManager.LoadScene(1);
         }
     }
 }

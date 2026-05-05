@@ -1,4 +1,6 @@
+using System.Security.Cryptography.X509Certificates;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class EndgameSceneHandler : MonoBehaviour
@@ -8,6 +10,7 @@ public class EndgameSceneHandler : MonoBehaviour
     public Sprite PlayerFellOff;
     public Sprite PlayerFoundEddie;
     public Sprite PlayerFoundGirl;
+    public Sprite PlayerLeft;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -36,6 +39,11 @@ public class EndgameSceneHandler : MonoBehaviour
                         targetPicture.sprite = PlayerFellOff;
                         break;
                     }
+                case GameEndings.LeftGate:
+                    {
+                        targetPicture.sprite = PlayerLeft;
+                        break;
+                    }
                 default:
                     {
                         break;
@@ -44,5 +52,9 @@ public class EndgameSceneHandler : MonoBehaviour
         }
     }
 
+    public void OnGetBackButtonClick()
+    {
+        SceneManager.LoadScene(0);
+    }
 
 }
